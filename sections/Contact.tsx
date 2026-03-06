@@ -11,20 +11,47 @@ export default function Contact() {
     message: '',
   })
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
-    setSubmitted(true)
-    setTimeout(() => setSubmitted(false), 3000)
+    setLoading(true)
+    setError('')
+
+    try {
+      const response = await fetch('https://formspree.io/f/mjgavrez', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
+      })
+
+      if (response.ok) {
+        setSubmitted(true)
+        setFormData({ name: '', email: '', message: '' })
+        setTimeout(() => setSubmitted(false), 3000)
+      } else {
+        setError('Failed to send message. Please try again.')
+      }
+    } catch (err) {
+      setError('An error occurred. Please try again.')
+    } finally {
+      setLoading(false)
+    }
   }
 
   const contactLinks = [
     {
       icon: Mail,
       label: 'Email',
-      value: 'rishabh.rudani@example.com',
-      href: 'mailto:rishabh.rudani@example.com',
+      value: 'rishabhnrudani@gmail.com',
+      href: 'mailto:rishabhnrudani@gmail.com',
       color: 'from-neon-cyan to-space-500',
     },
     {
@@ -81,6 +108,8 @@ export default function Contact() {
                   <motion.a
                     key={link.label}
                     href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="glass rounded-lg p-6 flex items-start gap-4 hover:border-white/20 transition-all group"
                     whileHover={{ x: 8 }}
                   >
@@ -169,21 +198,40 @@ export default function Contact() {
                 />
               </div>
 
+              {/* Error Message */}
+              {error && (
+                <motion.div
+                  className="p-3 rounded-lg bg-red-900/20 border border-red-600 text-red-400 text-sm"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                >
+                  {error}
+                </motion.div>
+              )}
+
               {/* Submit Button */}
               <motion.button
                 type="submit"
+                disabled={loading}
                 className={`w-full py-3 rounded-lg font-semibold flex items-center justify-center gap-2 transition-all ${
                   submitted
                     ? 'bg-neon-cyan/20 text-neon-cyan border border-neon-cyan'
+                    : loading
+                    ? 'bg-dark-700 text-dark-400 cursor-not-allowed'
                     : 'btn-primary'
                 }`}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={!loading && !submitted ? { scale: 1.05 } : {}}
+                whileTap={!loading && !submitted ? { scale: 0.95 } : {}}
               >
                 {submitted ? (
                   <>
                     <span>✓</span>
                     Message Sent!
+                  </>
+                ) : loading ? (
+                  <>
+                    <span className="animate-spin">⟳</span>
+                    Sending...
                   </>
                 ) : (
                   <>
