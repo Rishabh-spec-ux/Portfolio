@@ -8,9 +8,9 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com/rishabhrudani', label: 'GitHub' },
+    { icon: Github, href: 'https://github.com/Rishabh-spec-ux', label: 'GitHub' },
     { icon: Linkedin, href: 'https://linkedin.com/in/rishabh-rudani', label: 'LinkedIn' },
-    { icon: Mail, href: 'mailto:rishabh.rudani@example.com', label: 'Email' },
+    { icon: Mail, href: 'mailto:rishabhnrudani@gmail.com', label: 'Email' },
   ]
 
   const navLinks = [

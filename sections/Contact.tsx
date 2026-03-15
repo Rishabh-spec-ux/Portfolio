@@ -1,50 +1,9 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Mail, Github, Linkedin, Download, Send } from 'lucide-react'
-import { useState } from 'react'
+import { Mail, Github, Linkedin, Download } from 'lucide-react'
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  })
-  const [submitted, setSubmitted] = useState(false)
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState('')
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setLoading(true)
-    setError('')
-
-    try {
-      const response = await fetch('https://formspree.io/f/mjgavrez', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-        }),
-      })
-
-      if (response.ok) {
-        setSubmitted(true)
-        setFormData({ name: '', email: '', message: '' })
-        setTimeout(() => setSubmitted(false), 3000)
-      } else {
-        setError('Failed to send message. Please try again.')
-      }
-    } catch (err) {
-      setError('An error occurred. Please try again.')
-    } finally {
-      setLoading(false)
-    }
-  }
 
   const contactLinks = [
     {
@@ -64,8 +23,8 @@ export default function Contact() {
     {
       icon: Github,
       label: 'GitHub',
-      value: 'github.com/rishabhrudani',
-      href: 'https://github.com/rishabhrudani',
+      value: 'github.com/Rishabh-spec-ux',
+      href: 'https://github.com/Rishabh-spec-ux',
       color: 'from-neon-purple to-space-600',
     },
   ]
@@ -89,7 +48,7 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-1 gap-12">
           {/* Contact Information */}
           <motion.div
             className="space-y-6"
@@ -145,102 +104,6 @@ export default function Contact() {
                 Download Resume
               </motion.a>
             </motion.div>
-          </motion.div>
-
-          {/* Contact Form */}
-          <motion.div
-            className="glass rounded-lg p-8"
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Name */}
-              <div>
-                <label className="block text-sm font-semibold text-dark-200 mb-2">Name</label>
-                <motion.input
-                  type="text"
-                  placeholder="Your name"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3 rounded-lg bg-dark-900 border border-dark-700 text-dark-50 placeholder-dark-500 focus:border-space-500 focus:outline-none transition-colors"
-                  whileFocus={{ scale: 1.02 }}
-                  required
-                />
-              </div>
-
-              {/* Email */}
-              <div>
-                <label className="block text-sm font-semibold text-dark-200 mb-2">Email</label>
-                <motion.input
-                  type="email"
-                  placeholder="your.email@example.com"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3 rounded-lg bg-dark-900 border border-dark-700 text-dark-50 placeholder-dark-500 focus:border-space-500 focus:outline-none transition-colors"
-                  whileFocus={{ scale: 1.02 }}
-                  required
-                />
-              </div>
-
-              {/* Message */}
-              <div>
-                <label className="block text-sm font-semibold text-dark-200 mb-2">Message</label>
-                <motion.textarea
-                  placeholder="Tell me about your project or opportunity..."
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  rows={5}
-                  className="w-full px-4 py-3 rounded-lg bg-dark-900 border border-dark-700 text-dark-50 placeholder-dark-500 focus:border-space-500 focus:outline-none transition-colors resize-none"
-                  whileFocus={{ scale: 1.02 }}
-                  required
-                />
-              </div>
-
-              {/* Error Message */}
-              {error && (
-                <motion.div
-                  className="p-3 rounded-lg bg-red-900/20 border border-red-600 text-red-400 text-sm"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                >
-                  {error}
-                </motion.div>
-              )}
-
-              {/* Submit Button */}
-              <motion.button
-                type="submit"
-                disabled={loading}
-                className={`w-full py-3 rounded-lg font-semibold flex items-center justify-center gap-2 transition-all ${
-                  submitted
-                    ? 'bg-neon-cyan/20 text-neon-cyan border border-neon-cyan'
-                    : loading
-                    ? 'bg-dark-700 text-dark-400 cursor-not-allowed'
-                    : 'btn-primary'
-                }`}
-                whileHover={!loading && !submitted ? { scale: 1.05 } : {}}
-                whileTap={!loading && !submitted ? { scale: 0.95 } : {}}
-              >
-                {submitted ? (
-                  <>
-                    <span>✓</span>
-                    Message Sent!
-                  </>
-                ) : loading ? (
-                  <>
-                    <span className="animate-spin">⟳</span>
-                    Sending...
-                  </>
-                ) : (
-                  <>
-                    <Send size={18} />
-                    Send Message
-                  </>
-                )}
-              </motion.button>
-            </form>
           </motion.div>
         </div>
       </div>
