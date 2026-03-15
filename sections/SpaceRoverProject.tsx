@@ -92,6 +92,23 @@ export default function SpaceRoverProject() {
           </p>
         </motion.div>
 
+        {/* Rover Image */}
+        <motion.div
+          className="mb-20 rounded-lg overflow-hidden"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <div className="relative glass rounded-lg p-2 border border-space-500/30">
+            <img 
+              src="/rover.png" 
+              alt="Space Rover" 
+              className="w-full h-auto rounded-lg object-cover max-h-96"
+            />
+          </div>
+        </motion.div>
+
         {/* System Overview */}
         <motion.div
           className="mb-20"

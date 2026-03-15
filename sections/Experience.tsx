@@ -141,6 +141,14 @@ export default function Experience() {
                 <div className="glass rounded-2xl p-8 md:p-10 border border-space-500/30 group-hover:border-neon-cyan/50 transition-all duration-300">
                   {/* Header Section */}
                   <div className="mb-8 pb-8 border-b border-dark-700">
+                    {/* Company Image */}
+                    <div className="mb-6 rounded-lg overflow-hidden h-48">
+                      <img 
+                        src="/lm450.png" 
+                        alt="LM450 USV" 
+                        className="w-full h-full object-cover rounded-lg"
+                      />
+                    </div>
                     <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
                       <div>
                         <h3 className="text-3xl md:text-4xl font-bold text-dark-50 mb-2">
