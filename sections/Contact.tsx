@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Mail, Github, Linkedin, Download } from 'lucide-react'
+import { Mail, Github, Linkedin, Eye } from 'lucide-react'
 
 export default function Contact() {
 
@@ -17,7 +17,7 @@ export default function Contact() {
       icon: Linkedin,
       label: 'LinkedIn',
       value: 'linkedin.com/in/rishabh-rudani',
-      href: 'https://linkedin.com/in/rishabh-rudani',
+      href: 'https://www.linkedin.com/in/rishabh-rudani-635817275/',
       color: 'from-space-500 to-neon-purple',
     },
     {
@@ -86,7 +86,7 @@ export default function Contact() {
               })}
             </div>
 
-            {/* Resume Button */}
+            {/* CV Viewer */}
             <motion.div
               className="pt-6"
               initial={{ opacity: 0, y: 20 }}
@@ -94,15 +94,33 @@ export default function Contact() {
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <motion.a
-                href="/resume.pdf"
-                className="flex items-center justify-center gap-2 w-full px-6 py-4 rounded-lg bg-gradient-to-r from-space-600 to-neon-purple text-white font-semibold hover:from-space-500 hover:to-neon-purple transition-all"
-                whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(107, 77, 255, 0.4)' }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Download size={20} />
-                Download Resume
-              </motion.a>
+              <div className="rounded-lg overflow-hidden border border-dark-700 bg-dark-800/50">
+                <div className="p-4 bg-gradient-to-r from-space-600/20 to-neon-purple/20 border-b border-dark-700">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Eye size={20} className="text-neon-cyan" />
+                    <h3 className="text-lg font-bold text-dark-50">My Resume</h3>
+                  </div>
+                  <p className="text-sm text-dark-400">View my CV directly below • No download required • Scroll to explore</p>
+                </div>
+
+                <iframe
+                  src="/RishabhnRudani.pdf"
+                  className="w-full h-96 rounded-b-lg"
+                  title="Rishabh Rudani - Resume"
+                />
+
+                <div className="p-4 border-t border-dark-700 flex items-center justify-between gap-4">
+                  <p className="text-sm text-dark-400">👆 Use the scrollbar above to view the entire resume</p>
+                  <motion.a
+                    href="/RishabhnRudani.pdf"
+                    download
+                    className="px-4 py-2 rounded-lg bg-space-600/20 border border-space-500/50 text-space-300 hover:bg-space-600/30 hover:text-space-200 transition-all text-sm font-medium whitespace-nowrap"
+                    whileHover={{ scale: 1.05 }}
+                  >
+                    📥 Download
+                  </motion.a>
+                </div>
+              </div>
             </motion.div>
           </motion.div>
         </div>

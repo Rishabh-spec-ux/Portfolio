@@ -42,6 +42,7 @@ export default function Projects() {
     {
       title: 'Autonomous Car (ROS 2 Jazzy)',
       company: 'Academic Project',
+      code: 'https://github.com/Rishabh-spec-ux/rn_autonomous',
       description: 'Full ROS 2 autonomous vehicle with LiDAR-based SLAM and LaserScan navigation.',
       highlights: [
         'LiDAR-based SLAM integration',
@@ -51,7 +52,7 @@ export default function Projects() {
         'Gazebo simulation validation',
       ],
       tech: ['ROS 2 Jazzy', 'Nav2', 'Gazebo', 'RViz2', 'C++', 'Python'],
-      role: 'Software Engineer',
+      role: 'Robotics Student',
       color: 'from-neon-purple to-space-600',
     },
     {
@@ -65,7 +66,7 @@ export default function Projects() {
         'Trajectory planning for gripper',
       ],
       tech: ['MATLAB', 'Computer Vision', 'Image Processing', 'Robotics Toolbox'],
-      role: 'Control Systems Engineer',
+      role: 'Robotics Lab Student',
       color: 'from-space-500 to-neon-pink',
     },
     {
@@ -81,7 +82,7 @@ export default function Projects() {
         'Inference optimization',
       ],
       tech: ['Python', 'PyTorch', 'TensorFlow', 'OpenCV', 'NumPy', 'Pandas', 'Matplotlib'],
-      role: 'Machine Learning Engineer',
+      role: 'ML and DL Student',
       color: 'from-neon-pink to-neon-purple',
     },
     {
@@ -95,7 +96,7 @@ export default function Projects() {
         'Real-time path tracking',
       ],
       tech: ['Arduino', 'C/C++', 'PID Control', 'IR Sensors', 'Motor Drivers'],
-      role: 'Embedded Systems Engineer',
+      role: 'Embedded Systems student',
       color: 'from-space-600 to-neon-cyan',
     },
     {
@@ -110,7 +111,7 @@ export default function Projects() {
         'Real-time feedback loops',
       ],
       tech: ['MATLAB', 'Simulink', 'Arduino', 'Control Theory', 'DSP'],
-      role: 'Control Systems Engineer',
+      role: 'Control Systems Lab Student',
       color: 'from-neon-blue to-space-500',
     },
   ]
@@ -195,14 +196,18 @@ export default function Projects() {
 
                 {/* Footer */}
                 <div className="flex gap-3 pt-4 border-t border-dark-700">
-                  <motion.a
-                    href="#"
-                    className="flex items-center gap-2 text-sm text-dark-400 hover:text-space-300 transition-colors"
-                    whileHover={{ x: 4 }}
-                  >
-                    <Github size={16} />
-                    Code
-                  </motion.a>
+                  {project.code && (
+                    <motion.a
+                      href={project.code}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-sm text-dark-400 hover:text-space-300 transition-colors"
+                      whileHover={{ x: 4 }}
+                    >
+                      <Github size={16} />
+                      Code
+                    </motion.a>
+                  )}
                   <motion.a
                     href="#"
                     className="flex items-center gap-2 text-sm text-dark-400 hover:text-space-300 transition-colors"

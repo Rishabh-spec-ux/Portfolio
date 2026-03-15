@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Briefcase, Calendar, MapPin, Star, Zap, Award } from 'lucide-react'
+import { Briefcase, Calendar, MapPin, Star, Zap, Award, Youtube } from 'lucide-react'
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -31,6 +31,8 @@ export default function Experience() {
       location: 'Remote / Germany',
       status: 'Current Role',
       description: 'Architecting and implementing production-grade autonomous navigation stacks for USV (Unmanned Surface Vehicles) with focus on real-world deployment and system-level engineering.',
+      youtubeLink: 'https://www.youtube.com/watch?v=-LPQpsFACDE',
+      youtubeDescription: 'Watch the LM450 autonomous boat in action - live deployment and field testing of the complete autonomy stack',
       overallImpact: 'Led end-to-end development of complete autonomy pipeline from perception to hardware control, deployed on real marine robotics platform.',
       achievements: [
         {
@@ -189,6 +191,29 @@ export default function Experience() {
                       <p className="text-neon-cyan font-semibold">🎯 Overall Impact:</p>
                       <p className="text-dark-200 mt-2">{exp.overallImpact}</p>
                     </motion.div>
+
+                    {exp.youtubeLink && (
+                      <motion.a
+                        href={exp.youtubeLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group block p-4 rounded-lg bg-gradient-to-r from-red-900/20 to-space-900/20 border border-red-500/30 hover:border-red-500/60 hover:shadow-lg hover:shadow-red-500/20 transition-all"
+                        initial={{ opacity: 0, x: -10 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.3 }}
+                        viewport={{ once: true }}
+                        whileHover={{ x: 4 }}
+                      >
+                        <div className="flex items-start gap-3">
+                          <Youtube size={20} className="text-red-500 flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+                          <div>
+                            <p className="text-red-400 font-semibold text-sm">📹 Video Reference</p>
+                            <p className="text-dark-200 mt-1">{exp.youtubeDescription}</p>
+                            <p className="text-xs text-red-400/70 mt-2 group-hover:text-red-400 transition-colors">Click to watch on YouTube →</p>
+                          </div>
+                        </div>
+                      </motion.a>
+                    )}
                   </div>
 
                   {/* Key Achievements Grid */}
@@ -271,6 +296,48 @@ export default function Experience() {
                         </motion.span>
                       ))}
                     </div>
+                  </div>
+
+                  {/* Confidential Project Report */}
+                  <div className="mt-12 pt-8 border-t border-dark-700">
+                    <motion.div
+                      className="p-6 rounded-lg bg-gradient-to-r from-amber-900/20 to-orange-900/20 border border-amber-500/30 hover:border-amber-500/60 transition-all"
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.2 }}
+                      viewport={{ once: true }}
+                    >
+                      <div className="flex items-start gap-3 mb-4">
+                        <span className="text-2xl">🔒</span>
+                        <div>
+                          <h4 className="text-lg font-bold text-amber-300 mb-2">Confidential Project Documentation</h4>
+                          <p className="text-sm text-dark-300 mb-3">
+                            Due to Lemvos company confidentiality policies, proprietary source code and technical implementation details cannot be publicly disclosed. However, the internship report below provides comprehensive documentation of the project scope, architecture decisions, challenges overcome, and technical achievements.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="mt-4 rounded-lg overflow-hidden bg-dark-900/50 border border-dark-700">
+                        <iframe
+                          src="/LM450_Report.pdf"
+                          className="w-full h-96 rounded-lg"
+                          title="LM450 Internship Report"
+                        />
+                      </div>
+
+                      <div className="mt-4 flex flex-wrap gap-3">
+                        <a
+                          href="/LM450_Report.pdf"
+                          download
+                          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-amber-600/20 border border-amber-500 text-amber-300 hover:bg-amber-600/30 hover:text-amber-200 transition-all text-sm font-medium"
+                        >
+                          📥 Download Report
+                        </a>
+                        <p className="text-xs text-dark-500 flex items-center gap-2">
+                          <span>▲</span> Scroll inside the viewer above to browse the document
+                        </p>
+                      </div>
+                    </motion.div>
                   </div>
                 </div>
               </div>

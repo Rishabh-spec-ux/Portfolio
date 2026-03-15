@@ -17,8 +17,8 @@ export default function Home() {
       <About />
       <Skills />
       <SpaceRoverProject />
-      <Projects />
       <Experience />
+      <Projects />
       <Workflow />
       <Contact />
       <Footer />

@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Rocket, Navigation, Cpu, Eye, AlertCircle, CheckCircle } from 'lucide-react'
+import { Rocket, Navigation, Cpu, Eye, AlertCircle, CheckCircle, Github } from 'lucide-react'
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -27,37 +27,40 @@ export default function SpaceRoverProject() {
     {
       icon: Eye,
       title: 'Perception Pipeline',
-      details: ['Deep learning-based object detection', 'Real-time sensor processing', '[Add sensors used]', '[Add vision stack]'],
+      details: ['RGBD Camera + LIDAR fusion', 'U-Net semantic segmentation', 'Point cloud processing for costmap', 'OpenCV & Inverse Perspective Mapping', 'NumPy-based sensor processing'],
       color: 'from-neon-cyan to-space-400',
     },
     {
       icon: Navigation,
       title: 'Autonomy Stack',
-      details: ['Nav2 path planning integration', 'Autonomous navigation control', '[Add autonomy logic]', 'Mission manager with action clients'],
+      details: ['ROS 2 middleware integration', 'SLAM Toolbox with custom extensions', 'Behavior Tree mission control', 'Multi-level decision making', 'Real-time path execution'],
       color: 'from-neon-purple to-space-600',
     },
     {
       icon: Cpu,
       title: 'Control System',
-      details: ['Pure Pursuit trajectory tracking', 'Sensor fusion (IMU + GNSS)', '[Add onboard compute]', 'Motor abstraction layer (C++)'],
+      details: ['Jetson Orin onboard compute', 'IMU + LIDAR sensor fusion', 'Motor control abstraction layer', 'Environmental protection & weatherproofing', 'Real-time telemetry & diagnostics'],
       color: 'from-space-500 to-neon-pink',
     },
   ]
 
   const milestones = [
-    { status: 'completed', title: 'System Architecture Design', description: 'Designed modular autonomy stack' },
-    { status: 'completed', title: 'Simulation Environment', description: 'Gazebo environment with realistic sensors' },
-    { status: 'in-progress', title: 'Perception Integration', description: '[Add current development status]' },
-    { status: 'pending', title: 'Real-World Deployment', description: '[Add planned milestones]' },
+    { status: 'completed', title: 'URDF Model Development', description: 'Complete robot description file with all components' },
+    { status: 'in-progress', title: 'Gazebo World Setup', description: '50% complete - terrain and environment simulation' },
+    { status: 'pending', title: 'Perception Pipeline', description: 'U-Net segmentation and point cloud processing' },
+    { status: 'in-progress', title: 'SLAM Integration', description: 'SLAM Toolbox with ROS 2 integration' },
+    { status: 'pending', title: 'Behavior Tree Implementation', description: 'Mission-level autonomous control' },
+    { status: 'pending', title: 'Simulation Validation', description: 'End-to-end testing in Gazebo' },
+    { status: 'pending', title: 'Real-World Deployment', description: 'Hardware integration and field testing' },
   ]
 
   const architectureLayers = [
-    'Hardware Layer: Motors, Sensors, Actuators',
-    'Communication Layer: CAN, CANopen protocols',
-    'Middleware Layer: ROS 2, message passing',
-    'Perception Layer: Computer vision, sensor fusion',
-    'Planning Layer: Nav2, path planning algorithms',
-    'Mission Layer: Task coordination, objectives',
+    'Hardware Layer: RGBD Camera, LIDAR, IMU with environmental protection',
+    'Sensor Interface: ROS 2 drivers for camera, LIDAR, and IMU',
+    'Perception Layer: U-Net segmentation, point cloud processing, Inverse Perspective Mapping',
+    'Mapping & Localization: SLAM Toolbox with ROS 2, local costmap generation',
+    'Planning & Decision: Behavior Tree framework for mission-level control',
+    'Execution Layer: Motor control abstraction, real-time command dispatch',
   ]
 
   return (
@@ -92,7 +95,7 @@ export default function SpaceRoverProject() {
           </p>
         </motion.div>
 
-        {/* Rover Image */}
+        {/* Rover Image / Simulation */}
         <motion.div
           className="mb-20 rounded-lg overflow-hidden"
           initial={{ opacity: 0, y: 20 }}
@@ -100,12 +103,14 @@ export default function SpaceRoverProject() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <div className="relative glass rounded-lg p-2 border border-space-500/30">
-            <img 
-              src="/rover.png" 
-              alt="Space Rover" 
-              className="w-full h-auto rounded-lg object-cover max-h-96"
-            />
+          <div className="relative glass rounded-lg p-8 border border-space-500/30 bg-dark-800/50">
+            <div className="text-center">
+              <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-neon-purple/20 border border-neon-purple/50">
+                <span className="text-sm text-neon-purple font-semibold">🔄 Simulation Phase</span>
+              </div>
+              <p className="text-dark-300 mb-4">Gazebo simulation environment with URDF model and sensor suite</p>
+              <p className="text-sm text-dark-500">Simulation screenshots and results coming soon...</p>
+            </div>
           </div>
         </motion.div>
 
@@ -272,6 +277,30 @@ export default function SpaceRoverProject() {
             </div>
           </div>
         </motion.div>
+
+        {/* GitHub Repository */}
+        <motion.a
+          href="https://github.com/Rishabh-spec-ux/Space_Rover/tree/main"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group mt-12 flex items-center justify-between glass rounded-lg p-8 border border-dark-700 hover:border-space-400 transition-all cursor-pointer"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          viewport={{ once: true }}
+          whileHover={{ y: -4, borderColor: 'rgb(var(--color-space-400))' }}
+        >
+          <div className="flex items-start gap-4">
+            <div className="p-3 rounded-lg bg-gradient-to-br from-neon-cyan/20 to-space-600/10 group-hover:from-neon-cyan/30 group-hover:to-space-600/20 transition-all">
+              <Github size={24} className="text-neon-cyan group-hover:text-space-300 transition-colors" />
+            </div>
+            <div>
+              <h4 className="text-xl font-bold text-dark-50 group-hover:text-neon-cyan transition-colors mb-1">View on GitHub</h4>
+              <p className="text-dark-400 group-hover:text-dark-200 transition-colors">Explore the complete source code, configuration files, and development history</p>
+            </div>
+          </div>
+          <span className="text-neon-cyan text-xl group-hover:translate-x-2 transition-transform">→</span>
+        </motion.a>
       </div>
     </section>
   )
