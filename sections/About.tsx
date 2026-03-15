@@ -106,7 +106,7 @@ export default function About() {
           >
             <div className="glass rounded-lg p-8">
               <p className="text-dark-400 text-sm mb-4">EDUCATION</p>
-              <h3 className="text-2xl font-bold text-dark-50 mb-2">B.Sc. Robotics Engineering</h3>
+              <h3 className="text-2xl font-bold text-dark-50 mb-2">B.E. Robotics Engineering</h3>
               <p className="text-space-300">Technische Hochschule Würzburg-Schweinfurt (THWS), Germany</p>
             </div>
 
