@@ -26,23 +26,23 @@ export default function About() {
   const specializations = [
     {
       icon: Brain,
-      title: 'Perception & Vision',
-      description: 'Computer vision, sensor fusion, image segmentation, and real-world sensor integration',
+      title: 'Perception & Autonomous Systems',
+      description: 'Computer vision, image segmentation, object detection, sensor fusion, and real-world sensor integration',
     },
     {
       icon: Zap,
       title: 'Navigation & Control',
-      description: 'SLAM, path planning, trajectory tracking, and stable motion control systems',
+      description: 'SLAM, path planning, Pure Pursuit tracking, PID control, Kalman filters, and sensor fusion',
     },
     {
       icon: Cpu,
-      title: 'Simulation & Testing',
-      description: 'Gazebo, RViz2, simulation-to-real workflows, and comprehensive validation pipelines',
+      title: 'Hardware & Low-Level Control',
+      description: 'CAN/CANopen motor control, IMU/GNSS fusion, real-time systems, and embedded robotics',
     },
     {
       icon: Code2,
-      title: 'Software Architecture',
-      description: 'ROS 2, nav stack integration, message passing, and scalable robotics middleware',
+      title: 'Machine Learning & Deep Learning',
+      description: 'CNNs, RNNs, LSTMs, U-Net, reinforcement learning, and ML deployment pipelines',
     },
   ]
 
@@ -57,10 +57,10 @@ export default function About() {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-gradient">Building Robots That Think</span>
+            <span className="text-gradient">Building Intelligent Autonomous Systems</span>
           </h2>
           <p className="text-xl text-dark-300 max-w-3xl leading-relaxed">
-            I'm a robotics engineer passionate about autonomous systems. I specialize in bridging the gap between simulation and reality—taking algorithms from the lab to robots in the field.
+            Robotics Engineering student and Junior Robotics Software Engineer with hands-on experience in autonomous systems, marine robotics, and ROS 2-based software development. I specialize in bridging the gap between perception and control—designing complete autonomy stacks that deploy on real hardware, from simulation through to field validation.
           </p>
         </motion.div>
 
