@@ -103,14 +103,12 @@ export default function SpaceRoverProject() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <div className="relative glass rounded-lg p-8 border border-space-500/30 bg-dark-800/50">
-            <div className="text-center">
-              <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-neon-purple/20 border border-neon-purple/50">
-                <span className="text-sm text-neon-purple font-semibold">🔄 Simulation Phase</span>
-              </div>
-              <p className="text-dark-300 mb-4">Gazebo simulation environment with URDF model and sensor suite</p>
-              <p className="text-sm text-dark-500">Simulation screenshots and results coming soon...</p>
-            </div>
+          <div className="relative glass rounded-lg p-2 border border-space-500/30">
+            <img 
+              src="/curosity_Rover.png" 
+              alt="Curiosity Rover" 
+              className="w-full h-auto rounded-lg object-cover max-h-96"
+            />
           </div>
         </motion.div>
 
