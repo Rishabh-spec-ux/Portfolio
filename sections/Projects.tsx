@@ -110,7 +110,7 @@ export default function Projects() {
         'Transient response optimization',
         'Real-time feedback loops',
       ],
-      tech: ['MATLAB', 'Simulink', 'Arduino', 'Control Theory', 'DSP'],
+      tech: ['MATLAB', 'Simulink', 'Control Theory', 'DSP'],
       role: 'Control Systems Lab Student',
       color: 'from-neon-blue to-space-500',
     },
