@@ -25,6 +25,23 @@ const itemVariants = {
 export default function Projects() {
   const projects = [
     {
+      title: 'Path Follower Analyzer',
+      company: 'Personal Project',
+      code: 'https://github.com/Rishabh-spec-ux/path-follower-analyzer',
+      description: 'ROS 2 analysis tool for evaluating robot path-following performance with real-time trajectory tracking metrics.',
+      highlights: [
+        'Real-time tracking metrics (CTE, heading error, arc-length)',
+        'Interactive RViz visualization with dynamic markers',
+        'CSV export for advanced analysis and plotting',
+        'TF2-based frame transformation support',
+        'MCAP bag recording with metric splitting',
+        'Flexible YAML parameter configuration',
+      ],
+      tech: ['ROS 2', 'C++', 'Python', 'CMake', 'YAML', 'RViz'],
+      role: 'Robotics Software Developer',
+      color: 'from-neon-green to-space-500',
+    },
+    {
       title: 'Autonomous Surface Vehicle (ASV)',
       company: 'Lemvos',
       description: 'Built complete autonomy stack for an unmanned marine robot with perception, navigation, and control.',
