@@ -47,7 +47,7 @@ export default function Experience() {
         },
         {
           title: 'Deep Learning Perception',
-          description: 'Built marine object detection using deep learning, IPM (Inverse Perspective Mapping), and Bird\'s Eye View for environmental understanding',
+          description: 'Built marine object detection using U-NETS architecture and issac-ros-unet, IPM (Inverse Perspective Mapping), and Bird\'s Eye View for environmental understanding',
           icon: Award,
         },
         {
