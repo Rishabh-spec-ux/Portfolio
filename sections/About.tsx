@@ -106,12 +106,15 @@ export default function About() {
           >
             <div className="glass rounded-lg p-8">
               <p className="text-dark-400 text-sm mb-4">EDUCATION</p>
-              <h3 className="text-2xl font-bold text-dark-50 mb-2">B.E. Robotics Engineering</h3>
-              <p className="text-space-300">Technische Hochschule Würzburg-Schweinfurt (THWS), Germany</p>
+              <h3 className="text-2xl font-bold text-dark-50 mb-1">B.E. Robotics Engineering</h3>
+              <p className="text-space-300 text-sm mb-4">Technische Hochschule Würzburg-Schweinfurt (THWS), Germany</p>
+              <p className="text-dark-300 text-sm mb-3"><span className="font-semibold text-dark-200">Currently:</span> 6th Semester</p>
+              <p className="text-dark-300 text-sm"><span className="font-semibold text-dark-200">Specialization:</span> Mobile Robotics, 3D Machine Vision, SLAM, Deep Learning</p>
             </div>
 
-            <div className="glass rounded-lg p-8">
-              <p className="text-dark-400 text-sm mb-4">CURRENT FOCUS</p>
+            <div className="glass rounded-lg p-8">dvanced Robotics Topics</h3>
+              <p className="text-space-300 text-sm mb-3">Mobile robotics, 3D vision, SLAM, and deep learning applications.</p>
+              <p className="text-dark-300 text-xs"><span className="text-neon-cyan font-semibold">📡 Studying:</span> Aerial Drones
               <h3 className="text-2xl font-bold text-dark-50 mb-2">Autonomous Robotics</h3>
               <p className="text-space-300">Building intelligent systems that perceive, navigate, and act in complex environments.</p>
             </div>
