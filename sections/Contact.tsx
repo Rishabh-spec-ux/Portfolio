@@ -17,7 +17,7 @@ export default function Contact() {
       icon: Linkedin,
       label: 'LinkedIn',
       value: 'linkedin.com/in/rishabh-rudani',
-      href: 'https://www.linkedin.com/in/rishabh-rudani-635817275/',
+      href: 'https://www.linkedin.com/in/rishabh-rudani-635817275',
       color: 'from-space-500 to-neon-purple',
     },
     {
