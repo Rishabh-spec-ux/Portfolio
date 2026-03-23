@@ -28,7 +28,7 @@ export default function Experience() {
       title: 'Junior Robotics Software Engineer',
       company: 'Lemvos',
       period: 'Present',
-      location: 'Remote / Germany',
+      location: 'Augsburg / Germany',
       status: 'Current Role',
       description: 'Architecting and implementing production-grade autonomous navigation stacks for USV (Unmanned Surface Vehicles) with focus on real-world deployment and system-level engineering.',
       youtubeLink: 'https://www.youtube.com/watch?v=-LPQpsFACDE',
