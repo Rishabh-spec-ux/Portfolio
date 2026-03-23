@@ -104,7 +104,7 @@ export default function Contact() {
                 </div>
 
                 <iframe
-                  src="/RishabhnRudani.pdf"
+                  src="/Rishabh_N_Rudani_CV.pdf"
                   className="w-full h-96 rounded-b-lg"
                   title="Rishabh Rudani - Resume"
                 />
@@ -112,7 +112,7 @@ export default function Contact() {
                 <div className="p-4 border-t border-dark-700 flex items-center justify-between gap-4">
                   <p className="text-sm text-dark-400">👆 Use the scrollbar above to view the entire resume</p>
                   <motion.a
-                    href="/RishabhnRudani.pdf"
+                    href="/Rishabh_N_Rudani_CV.pdf"
                     download
                     className="px-4 py-2 rounded-lg bg-space-600/20 border border-space-500/50 text-space-300 hover:bg-space-600/30 hover:text-space-200 transition-all text-sm font-medium whitespace-nowrap"
                     whileHover={{ scale: 1.05 }}
