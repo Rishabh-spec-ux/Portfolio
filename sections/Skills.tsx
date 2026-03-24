@@ -57,7 +57,7 @@ export default function Skills() {
       icon: Settings,
       title: 'Control & Systems',
       color: 'from-space-500 to-neon-cyan',
-      skills: ['PID Control', 'Pure Pursuit Controller', 'Trajectory Tracking', 'Kalman Filters', 'IMU/GNSS Fusion', 'DSP', 'CAN Bus', 'CANopen', 'Socket Programming'],
+      skills: ['PID Control', 'Pure Pursuit Controller', 'Trajectory Tracking', 'Kalman Filters', 'IMU/GNSS Fusion', 'DSP', 'CAN Bus', 'CANopen', 'Actuators', 'Socket Programming'],
       description: 'Motion control, sensor fusion, state estimation, and low-level hardware communication',
     },
     {
