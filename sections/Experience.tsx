@@ -319,7 +319,7 @@ export default function Experience() {
 
                       <div className="mt-4 rounded-lg overflow-hidden bg-dark-900/50 border border-dark-700">
                         <iframe
-                          src="/LM450_Report.pdf"
+                          src="/Rishabh_Internship_report.pdf"
                           className="w-full h-96 rounded-lg"
                           title="LM450 Internship Report"
                         />
@@ -327,7 +327,7 @@ export default function Experience() {
 
                       <div className="mt-4 flex flex-wrap gap-3">
                         <a
-                          href="/LM450_Report.pdf"
+                          href="/Rishabh_Internship_report.pdf"
                           download
                           className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-amber-600/20 border border-amber-500 text-amber-300 hover:bg-amber-600/30 hover:text-amber-200 transition-all text-sm font-medium"
                         >
