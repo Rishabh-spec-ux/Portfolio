@@ -50,7 +50,7 @@ export default function Skills() {
       icon: Brain,
       title: 'Machine Learning & Deep Learning',
       color: 'from-neon-pink to-neon-purple',
-      skills: ['PyTorch', 'TensorFlow', 'CNNs', 'RNNs', 'LSTMs', 'GRUs', 'U-Net', 'Reinforcement Learning', 'Scikit-learn', 'OpenCV'],
+      skills: ['PyTorch', 'TensorFlow', 'CNNs', 'RNNs', 'LSTMs', 'GRUs', 'U-Net', 'YOLO', 'ONNX', 'CUDA', 'Reinforcement Learning', 'Scikit-learn', 'OpenCV'],
       description: 'Deep learning architectures for perception tasks and model deployment',
     },
     {
