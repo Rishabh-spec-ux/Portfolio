@@ -43,7 +43,7 @@ export default function Skills() {
       icon: Eye,
       title: 'Perception & Autonomous Systems',
       color: 'from-neon-blue to-neon-cyan',
-      skills: ['Computer Vision', 'Image Segmentation', 'Object Detection', 'IPM', 'Bird\'s Eye View', 'PointCloud2', 'Sensor Fusion', 'Localization', 'Navigation'],
+      skills: ['Computer Vision', 'Image Segmentation', 'Object Detection', 'IPM', 'Bird\'s Eye View', 'PointCloud2', 'Sensor Fusion', 'Localization', 'Navigation', 'EKF SLAM', 'Graph Based SLAM'],
       description: 'Environmental perception, state estimation, and autonomous decision-making',
     },
     {
