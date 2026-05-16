@@ -65,7 +65,8 @@ export default function SpaceRoverProject() {
 
               <h2 className="text-3xl md:text-4xl font-bold mb-2">Space Robotics Hardware & Software Developer</h2>
               <p className="text-md text-dark-300 mb-2 font-medium">Odysseus Rover — University of Würzburg · AMADEE-27</p>
-              <p className="text-sm text-dark-400 mb-4">Dec 2025 – Present · Germany</p>
+              <p className="text-sm text-dark-400 mb-2">Dec 2025 – Present · Germany</p>
+              <p className="text-xs text-dark-400 mb-4 italic">Note: The project GitHub link has been removed due to project restrictions and is not available publicly.</p>
 
               <div className="space-y-3 text-dark-300">
                 <motion.div className="flex items-start gap-3" whileHover={{ x: 4 }}>
