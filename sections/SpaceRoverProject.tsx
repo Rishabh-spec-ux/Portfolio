@@ -40,7 +40,7 @@ export default function SpaceRoverProject() {
             >
               <div className="relative">
                 <img
-                  src="/rover.png?v=3"
+                  src="/odyseeus_rover_v2.png?v=1"
                   alt="Odysseus Rover"
                   className="w-full h-auto object-cover rounded-xl max-h-96"
                 />
