@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Rocket, Navigation, Cpu, Eye, AlertCircle, CheckCircle, Github } from 'lucide-react'
+import { Rocket, Navigation, Cpu, Eye, AlertCircle, CheckCircle } from 'lucide-react'
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -81,13 +81,4 @@ export default function SpaceRoverProject() {
     </section>
   )
 }
-              <h4 className="text-xl font-bold text-dark-50 group-hover:text-neon-cyan transition-colors mb-1">View on GitHub</h4>
-              <p className="text-dark-400 group-hover:text-dark-200 transition-colors">Explore the complete source code, configuration files, and development history</p>
-            </div>
-          </div>
-          <span className="text-neon-cyan text-xl group-hover:translate-x-2 transition-transform">→</span>
-        </motion.a>
-      </div>
-    </section>
-  )
-}
+
