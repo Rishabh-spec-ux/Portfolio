@@ -40,9 +40,9 @@ export default function SpaceRoverProject() {
             >
               <div className="relative">
                 <img
-                  src="/odysseus_rover.png?v=1"
+                  src="/odysseus_rover.png"
                   alt="Odysseus Rover"
-                  className="w-full h-auto object-cover rounded-xl max-h-96"
+                  className="w-full h-auto object-contain rounded-xl bg-dark-900"
                 />
                 <div className="absolute left-4 bottom-4 bg-gradient-to-r from-neon-cyan/80 to-neon-purple/80 text-white px-3 py-1 rounded-full text-sm font-semibold backdrop-blur">
                   Odysseus Rover
@@ -111,4 +111,3 @@ export default function SpaceRoverProject() {
     </section>
   )
 }
-
